@@ -12,6 +12,9 @@
   line-height: 45px;
   max-width: 160px;
   min-width: 0;
+}
+
+.topbar-title-group > .topbar-title-maxwidth {
   flex: 1 1 auto;
 }
 
@@ -91,6 +94,7 @@
 					{{(index.shared_address || index.alias || index.walletName)}}
 				</span>
 				<span class="arrow-down" style="border-top-color: #4E4E4E !important"></span>
+				<span ng-if="index.n > 1" class="topbar-multisig-badge">{{index.m}}-<span translate>of</span>-{{index.n}}</span>
 			</a>
 		</span>
     </h1>
